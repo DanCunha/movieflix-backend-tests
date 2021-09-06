@@ -13,13 +13,13 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    private String subTitle;
+    private String subtitle;
     private Integer year;
     private String imgUrl;
     private String synopsis;
 
     @ManyToOne
-    @JoinColumn(name = "movie_id")
+    @JoinColumn(name = "genre_id")
     private Genre genre;
 
     @OneToMany(mappedBy = "movie")
@@ -28,10 +28,10 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis) {
+    public Movie(Long id, String title, String subtitle, Integer year, String imgUrl, String synopsis) {
         this.id = id;
         this.title = title;
-        this.subTitle = subTitle;
+        this.subtitle = subtitle;
         this.year = year;
         this.imgUrl = imgUrl;
         this.synopsis = synopsis;
@@ -53,12 +53,12 @@ public class Movie {
         this.title = title;
     }
 
-    public String getSubTitle() {
-        return subTitle;
+    public String getSubtitle() {
+        return subtitle;
     }
 
-    public void setSubTitle(String subTitle) {
-        this.subTitle = subTitle;
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
     }
 
     public Integer getYear() {
@@ -106,11 +106,11 @@ public class Movie {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Movie movie = (Movie) o;
-        return Objects.equals(id, movie.id) && Objects.equals(title, movie.title) && Objects.equals(subTitle, movie.subTitle) && Objects.equals(year, movie.year) && Objects.equals(imgUrl, movie.imgUrl) && Objects.equals(synopsis, movie.synopsis);
+        return Objects.equals(id, movie.id) && Objects.equals(title, movie.title) && Objects.equals(subtitle, movie.subtitle) && Objects.equals(year, movie.year) && Objects.equals(imgUrl, movie.imgUrl) && Objects.equals(synopsis, movie.synopsis);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, subTitle, year, imgUrl, synopsis);
+        return Objects.hash(id, title, subtitle, year, imgUrl, synopsis);
     }
 }
