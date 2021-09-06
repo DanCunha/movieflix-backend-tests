@@ -12,10 +12,10 @@ public class Review {
     private String text;
 
     @ManyToOne
-    @JoinColumn(name = "review_id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "review_id")
+    @JoinColumn(name = "movie_id")
     private Movie movie;
 }
