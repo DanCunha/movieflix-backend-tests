@@ -14,4 +14,8 @@ public class Review {
     @ManyToOne
     @JoinColumn(name = "review_id")
     private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "review_id")
+    private Movie movie;
 }
