@@ -1,5 +1,7 @@
 package com.devsuperior.movieflix.dto;
 
+import com.devsuperior.movieflix.entities.Genre;
+
 import java.io.Serializable;
 
 public class GenreDTO implements Serializable {
@@ -13,6 +15,11 @@ public class GenreDTO implements Serializable {
     public GenreDTO(Long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public GenreDTO(Genre entity) {
+        this.id = entity.getId();
+        this.name = entity.getName();
     }
 
     public Long getId() {
