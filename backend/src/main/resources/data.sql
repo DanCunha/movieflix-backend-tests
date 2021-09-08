@@ -17,5 +17,7 @@ INSERT INTO tb_genre(name) VALUES('Aventura');
 INSERT INTO tb_movie (title, subtitle, year, img_url, synopsis, genre_id) VALUES ('Back to the Future', 'Parte 1', 1985, 'ewwqeqweqwewqe', 'The best movie', 1);
 INSERT INTO tb_movie (title, subtitle, year, img_url, synopsis, genre_id) VALUES ('Star Wars', 'Parte 1', 1977, 'ewwqeqweqwewqe', 'Luke Skywalker une forças com um cabaleiro Jedi', 2);
 INSERT INTO tb_movie (title, subtitle, year, img_url, synopsis, genre_id) VALUES ('The Matrix', 'The Matrix', 1999, 'ewwqeqweqwewqe', 'Hacker rebelde', 1);
+INSERT INTO tb_movie (title, subtitle, year, img_url, synopsis, genre_id) VALUES ('The Goonies', 'The Goonies', 1985, 'ewwqeqweqwewqe', 'Tesouro do Pirata', 6);
 
+INSERT INTO tb_review(text, user_id, movie_id) VALUES('Filme Topzeira', 1, 1);
 

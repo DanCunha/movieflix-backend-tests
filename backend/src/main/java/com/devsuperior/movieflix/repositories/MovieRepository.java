@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
-    @Query("SELECT obj FROM Movie obj WHERE (COALESCE(:genreId) IS NULL OR obj.genre.id = :genreId) ")
+    @Query("SELECT obj FROM Movie obj WHERE :genreId IS NULL OR obj.genre.id = :genreId ")
     Page<Movie> find(Long genreId, Pageable pageable);
 }
