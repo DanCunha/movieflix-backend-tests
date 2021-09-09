@@ -28,6 +28,10 @@ public class Movie {
     public Movie() {
     }
 
+    public Movie(Long id) {
+        this.id = id;
+    }
+
     public Movie(Long id, String title, String subtitle, Integer year, String imgUrl, String synopsis) {
         this.id = id;
         this.title = title;
